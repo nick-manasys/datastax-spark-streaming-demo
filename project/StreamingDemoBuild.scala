@@ -89,7 +89,9 @@ object Settings extends Build {
 
 object Versions {
   val Cassandra      = "2.1.2"
+  // val Cassandra      = "3.9"
   val CassandraDriver = "2.1.3"
+  // val CassandraDriver = "3.1.4"
   val CommonsLang3    = "3.3.2"
   val JDK            = "1.7"
   val Scala          = "2.10.4"
