@@ -20,7 +20,7 @@ class PersistStreamByInterval extends Serializable {
     //stream.repartition(2)
 
     // Filter Accepted RSVP
-    val rsvpAccepted = stream.filter(_.response == "yes")
+    val rsvpAccepted = stream.filter(_.response == "yes").filter(_.group.group_country.get == "nz")
 
     // Number of attendees by Country
     val rsvpByCountry = rsvpAccepted

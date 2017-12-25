@@ -12,7 +12,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="//cloud.github.com/downloads/lafeber/world-flags-sprite/flags32.css" rel="stylesheet" type="text/css">
+    <link href="https://www.github.com/downloads/lafeber/world-flags-sprite/flags32.css" rel="stylesheet" type="text/css">
 
     <style>
         body {
@@ -153,11 +153,11 @@
     }, 5000);
 
     must.Rsvps(function(rsvp) {
-        if(rsvp.response == "yes") {
+        if(rsvp.response == "yes" && rsvp.group.group_country == "nz") {
             $("#stream").prepend( [
-            '<div class="f32"><span class="flag ', rsvp.group.group_country, '">&nbsp;</span>'
+            '<div class="f32">>>>>><span class="flag ', rsvp.group.group_country, '">&nbsp;</span>'
                 , rsvp.group.group_name , '<div class="person">'
-                , rsvp.member.member_name
+                , '----' + rsvp.member.member_name + ' : ' + rsvp.group.group_country + ' : ' + rsvp.group.group_city + '==-'
                 , '</div></div>'
             ].join(''));
         }
